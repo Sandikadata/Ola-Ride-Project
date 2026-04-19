@@ -10,7 +10,7 @@ def get_connection():
     engine = create_engine("postgresql+psycopg2://postgres:1234@localhost:5432/postgres")
     return engine.connect()
 
-BASE_DIR = r"E:\CODE\OLA_RIDE _PROJECT\images"
+BASE_DIR = "images"
 
 icon = Image.open("images/ola.jpg")
 
@@ -25,7 +25,7 @@ st.set_page_config(
 st.title("🚖 Ola Ride Analysis Dashboard")
 
 # Load Data
-df = pd.read_csv(r"E:\CODE\OLA_RIDE _PROJECT\OLA_ride.csv")
+df = pd.read_csv("OLA_ride.csv")
 
 # Vehicle Images Dictionary
 vehicle_images = {
