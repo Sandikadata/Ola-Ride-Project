@@ -4,7 +4,6 @@ import plotly.express as px
 from PIL import Image
 import os
 from sqlalchemy import create_engine
-import psycopg2
 
 
 def get_connection():
