@@ -4,5 +4,4 @@ pandas
 plotly
 pillow
 numpy
-psycopg2
 sqlalchemy
