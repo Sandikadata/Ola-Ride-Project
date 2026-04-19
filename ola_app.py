@@ -114,7 +114,7 @@ with tab0:
 with tab1:
     col1, col2 = st.columns([1, 4])
 
-    safe_col_image(col1, os.path.join(BASE_DIR, "overall_tab.png"))
+    safe_col_image(col1, os.path.join(BASE_DIR, "Overall_tab.png"))
 
     with col2:
         show_kpi()
