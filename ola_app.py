@@ -11,6 +11,7 @@ def get_connection():
     return engine.connect()
 
 BASE_DIR = "images"
+SQL_DIR = "SQL_Result"  # Relative path — place this folder next to ola_app.py
 
 icon = Image.open("images/ola.jpg")
 
@@ -37,6 +38,7 @@ vehicle_images = {
     "Prime Sedan": os.path.join(BASE_DIR, "prime_sedan.png"),
     "eBike": os.path.join(BASE_DIR, "ebike.png")
 }
+
 # Convert Date
 df["Date"] = pd.to_datetime(df["Date"]).dt.date
 
@@ -106,6 +108,7 @@ def cancel_kpi():
     col1.metric("Cancelled by Customer", cancel_customer)
     col2.metric("Cancelled by Driver", cancel_driver)
     col3.metric("Cancelled %", f"{cancel_percent:.2f}%")
+
 # Tabs
 tab0, tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
     ["🏠 Home", "📊 Overview", "🚗 Vehicle Type", "💰 Revenue", "❌ Cancellation", "⭐ Ratings", "🗄️ SQL Insights"]
@@ -216,6 +219,7 @@ with tab2:
             col4.write(f"₹{row['Success_Booking_Value']:,.0f}")
             col5.write(f"{row['Avg_Distance']} km")
             col6.write(f"{row['Total_Ride_Distance']} km")
+
 # Revenue Tab
 with tab3:
     col1, col2 = st.columns([1,4])
@@ -284,7 +288,7 @@ with tab5:
     col1, col2 = st.columns([1,4])
 
     with col1:
-        st.image("images/Ratings_tab.png")  # add your ratings tab image if you have one
+        st.image("images/Ratings_tab.png")
 
     with col2:
         show_kpi()
@@ -317,13 +321,10 @@ with tab5:
             col2.write(vehicle)
             col3.write(row["Driver_Ratings"])
             col4.write(row["Customer_Rating"])
-# SQL Insights Tab
-# SQL Insights Tab
+
 # SQL Insights Tab
 with tab6:
     st.header("🗄️ SQL Query Insights")
-
-    SQL_DIR = r"E:\CODE\OLA_RIDE _PROJECT\SQL_Result"
 
     # ── 1. Successful Bookings ────────────────────────────
     st.subheader("1. Retrieve all Successful Bookings")
