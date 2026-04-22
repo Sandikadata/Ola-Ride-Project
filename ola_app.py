@@ -316,22 +316,23 @@ with tab5:
             col4.write(row["Customer_Rating"])
 
 # SQL Insights Tab
+# SQL Insights Tab
 with tab6:
     st.header("🗄️ SQL Query Insights")
 
-   SQL_DIR = "SQL_Result"
+    SQL_DIR = "SQL_Result"
 
     # ── 1. Successful Bookings ────────────────────────────
     st.subheader("1. Retrieve all Successful Bookings")
     df1 = pd.read_csv(os.path.join(SQL_DIR, "1_Sucess_booking_status.csv"))
-    st.dataframe(df1, use_container_width=True,hide_index=True)
+    st.dataframe(df1, use_container_width=True, hide_index=True)
 
     st.markdown("---")
 
     # ── 2. Average Ride Distance ──────────────────────────
     st.subheader("2. Average Ride Distance by Vehicle Type")
     df2 = pd.read_csv(os.path.join(SQL_DIR, "2_Avg_ride_distance.csv"))
-    st.dataframe(df2, use_container_width=True,hide_index=True)
+    st.dataframe(df2, use_container_width=True, hide_index=True)
 
     st.markdown("---")
 
@@ -345,14 +346,14 @@ with tab6:
     # ── 4. Top 5 Customers ────────────────────────────────
     st.subheader("4. Top 5 Customers by Number of Rides")
     df4 = pd.read_csv(os.path.join(SQL_DIR, "4_Top_five_Customer.csv"))
-    st.dataframe(df4, use_container_width=True,hide_index=True)
+    st.dataframe(df4, use_container_width=True, hide_index=True)
 
     st.markdown("---")
 
     # ── 5. Cancelled by Driver ────────────────────────────
     st.subheader("5. Rides Cancelled by Driver (Personal & Car Related Issue)")
     df5 = pd.read_csv(os.path.join(SQL_DIR, "5_Cancelled_by_driver_personal_and_car_issue.csv"))
-    st.dataframe(df5, use_container_width=True,hide_index=True)
+    st.dataframe(df5, use_container_width=True, hide_index=True)
 
     st.markdown("---")
 
@@ -368,7 +369,7 @@ with tab6:
     # ── 7. UPI Payments ───────────────────────────────────
     st.subheader("7. Rides Paid via UPI")
     df7 = pd.read_csv(os.path.join(SQL_DIR, "7_ payment_by_upi.csv"))
-    st.dataframe(df7, use_container_width=True,hide_index=True)
+    st.dataframe(df7, use_container_width=True, hide_index=True)
 
     st.markdown("---")
 
@@ -387,9 +388,6 @@ with tab6:
     st.markdown("---")
 
     # ── 10. Incomplete Rides ──────────────────────────────
-
     st.subheader("10. Incomplete Rides Count by Reason")
-
     df10 = pd.read_csv(os.path.join(SQL_DIR, "10_incomplete_ride_reseaon.csv"))
-
     st.dataframe(df10, use_container_width=True, hide_index=True)
