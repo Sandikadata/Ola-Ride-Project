@@ -318,8 +318,9 @@ with tab5:
 # SQL Insights Tab
 # SQL Insights Tab
 with tab6:
-    st.header("🗄️ SQL Query Insights")
-
+   with tab6:
+    st.header()
+   
     SQL_DIR = "SQL_Result"
 
     # ── 1. Successful Bookings ────────────────────────────
