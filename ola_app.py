@@ -122,7 +122,7 @@ with tab0:
 with tab1:
     col1, col2 = st.columns([1,4])
 
-    col1.image("images/overall_tab.png")
+    col1.image("images/Overall_tab.png")
 
     with col2:
         show_kpi()
