@@ -319,7 +319,7 @@ with tab5:
 with tab6:
     st.header("🗄️ SQL Query Insights")
 
-    SQL_DIR = r"E:\CODE\OLA_RIDE _PROJECT\SQL_Result"
+   SQL_DIR = "SQL_Result"
 
     # ── 1. Successful Bookings ────────────────────────────
     st.subheader("1. Retrieve all Successful Bookings")
