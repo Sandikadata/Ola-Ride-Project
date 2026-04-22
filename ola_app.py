@@ -319,7 +319,7 @@ with tab5:
 # SQL Insights Tab
 with tab6:
    with tab6:
-    st.header()
+    st.header("SQL Insight")
    
     SQL_DIR = "SQL_Result"
 
