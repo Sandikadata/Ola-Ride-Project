@@ -76,7 +76,7 @@ def show_kpi():
     col1, col2 = st.columns(2)
 
     total_booking = filtered_df["Booking_ID"].count()
-    total_value = filtered_df[filtered_df["Booking_Status"] == "Success"]["Booking_Value"].sum()
+    total_value = filtered_df[filtered_df["Booking_Status"] == "Success"]["Booking_Value"].sum() 
 
     col1.metric("Total Bookings", total_booking)
     col2.metric("Total Booking Value", f"₹{total_value:,.0f}")
