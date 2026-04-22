@@ -23,8 +23,7 @@ st.set_page_config(
 st.title("🚖 Ola Ride Analysis Dashboard")
 
 # Load Data
-df = pd.read_csv(r"E:\CODE\OLA_RIDE _PROJECT\OLA_ride.csv")
-
+df = pd.read_csv("OLA_ride.csv")
 # Vehicle Images Dictionary
 vehicle_images = {
     "Auto": os.path.join(BASE_DIR, "auto.png"),
