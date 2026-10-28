@@ -71,7 +71,7 @@ Cancellation Rate (%) = Cancelled Bookings / Total Bookings × 100
 Define exactly which statuses count as cancelled and ensure a booking is not counted twice if customer and driver cancellation flags overlap. Confirm whether rating cards display averages rather than sums, and document the denominator for every percentage.
 Business Recommendations
 After validating the data, use the findings to consider:
-- Investigating the most frequent cancellation reasons and the stages at which cancellations occur.
+- Investigating the most frequent cancellation reasons and the stages at which cancellations occur. 
 - Comparing vehicle categories by demand, distance, booking value, and completion rate.
 - Reviewing payment-method patterns and booking-value distribution.
 - Monitoring rating changes by period and vehicle type.
